@@ -1,102 +1,123 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Scribbler Documentation - a code documentation page template for codrops</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
-    <link rel="stylesheet" href="scribbler-global.css">
-    <link rel="stylesheet" href="scribbler-doc.css">
-    <link rel="author" href="humans.txt">
-  </head>
-  <body>
-    <div class="doc__bg"></div>
-    <nav class="header">
-      <h1 class="logo">SesliGezinti <span class="logo__thin">Doc</span></h1>
-      <ul class="menu">
-        <div class="menu__item toggle"><span></span></div>
-        <li class="menu__item"><a href="https://github.com/webtures/sesligezinti" class="link link--dark"><i class="fa fa-github"></i> Github</a></li>
-        <li class="menu__item"><a href="index.html" class="link link--dark"><i class="fa fa-home"></i> Ana Sayfa</a></li>
-      </ul>
-    </nav>
-    <div class="wrapper">
-      <aside class="doc__nav">
-        <ul>
-          <li class="js-btn selected">Başlayın</li>
-          <li class="js-btn">Kurulum</li>
-          <li class="js-btn">Ayarlar</li>
-          <li class="js-btn">Kullanım</li>
-          <li class="js-btn">Sorunlar</li>
-        </ul>
-      </aside>
-      <article class="doc__content">
-        <section class="js-section">
-          <h3 class="section__title">Başlayın</h3>
-          <p>Learn how to configure settings for Scribbler, such as your syntax highlighting preference and the default saving folder location.</p>
-          <h3 class="section__title">Installation</h3>
-          <div class="code__block code__block--notabs">
-            <pre class="code code--block">
-              <code>
-                $ scribbler  ——config
-                  {
-                    “encryption”: true, 
-                    “highlighting“: true,
-                    “prettyTable”: false,
-                    “font”: [“Helvetica”, “sans-serif”],
-                    “folder”: “~/Desktop“
-                  }
-              </code>
-            </pre>
-          </div>
-        </section>
-        <section class="js-section">
-          <h3 class="section__title">Configuration</h3>
-          <p>Learn how to configure settings for Scribbler, such as your syntax highlighting preference and the default saving folder location.</p>
-          <table id="customers">
-            <tr>
-              <th>Options</th>
-              <th>Value</th>
-              <th>Default</th>
-            </tr>
-            <tr>
-              <td>encryption</td>
-              <td>encrypt all notes before saving. If turned on, it requires password to open the file.</td>
-              <td>false</td>
-            </tr>
-            <tr>
-              <td>highlighting</td>
-              <td>Show syntax highlight on markdown text.</td>
-              <td>true</td>
-            </tr>
-            <tr>
-              <td>prettyTable</td>
-              <td>Render table with Scribbler’s pretty table style.</td>
-              <td>true</td>
-            </tr>
-          </table>
-          <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant definiebas concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case dicant lobortis ius te, ad vel affert oportere reprehendunt. Quo no verterem deseruisse, mea brute postea te, ne per tacimates suavitate vituperatoribus.</p>
-          <hr />
-        </section>
-        <section class="js-section">
-          <h3 class="section__title">Keybindings</h3>
-          <p>Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel inani aeterno ad. Facer oratio ex per. At eam movet verear, in sea brute patrioque disputando, usu nonumes torquatos an. Ex his quaerendum intellegebat, ut vel homero accusam. Eum at debet tibique, in vocibus temporibus adversarium sed. Porro verear eu vix, ne usu tation vituperata.</p>
-          <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant definiebas concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case dicant lobortis ius te, ad vel affert oportere reprehendunt. Quo no verterem deseruisse, mea brute postea te, ne per tacimates suavitate vituperatoribus.</p>
-          <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant definiebas concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case dicant lobortis ius te, ad vel affert oportere reprehendunt. Quo no verterem deseruisse, mea brute postea te, ne per tacimates suavitate vituperatoribus.</p>
-          <hr />
-        </section>
-        <section class="js-section">
-          <h3 class="section__title">Issues</h3>
-          <p>Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel inani aeterno ad. Facer oratio ex per. At eam movet verear, in sea brute patrioque disputando, usu nonumes torquatos an. Ex his quaerendum intellegebat, ut vel homero accusam. Eum at debet tibique, in vocibus temporibus adversarium sed. Porro verear eu vix, ne usu tation vituperata.</p>
-          <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant definiebas concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case dicant lobortis ius te, ad vel affert oportere reprehendunt. Quo no verterem deseruisse, mea brute postea te, ne per tacimates suavitate vituperatoribus.</p>
-        </section>
-      </article>
-    </div>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Sesli Gezinti kütüphanesi sayesinde web'de gezinmek için görme yetisine sahip olmak şart değil. Üstelik geliştiriciler için jQuery kullanmak veya kullanıcılar için başka bir uygulama kullanmak zorunlu da değil! Web sitenizi şimdi Sesli Gezinti uyumlu yapın.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dokümantasyon | Sesli Gezinti</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+        <link rel="stylesheet" href="scribbler-global.css">
+        <link rel="stylesheet" href="scribbler-doc.css">
+    </head>
+    <body>
+        <div class="doc__bg"></div>
+        <nav class="header">
+            <h1 class="logo">SesliGezinti <span class="logo__thin">Doc</span></h1>
+            <ul class="menu">
+                <div class="menu__item toggle"><span></span></div>
+                <li class="menu__item"><a href="https://github.com/webtures/sesligezinti" class="link link--dark"><i class="fa fa-github"></i> Github</a></li>
+                <li class="menu__item"><a href="index.html" class="link link--dark"><i class="fa fa-home"></i> Ana Sayfa</a></li>
+            </ul>
+        </nav>
+        <div class="wrapper">
+            <aside class="doc__nav">
+                <ul>
+                <li class="js-btn selected">Başlayın</li>
+                <li class="js-btn">Kullanım</li>
+                <li class="js-btn">Fonksiyonlar</li>
+                <li class="js-btn">Sorunlar</li>
+                </ul>
+            </aside>
+            <article class="doc__content">
+                <section class="js-section">
+                    <h2 class="section__title">Başlayın</h2>
+                    <p>Sesli Gezinti'yi web sitenize nasıl entegre edeceğinizi öğrenin.</p>
+                    <h3 class="section__title">Kurulum</h3>
+                    <div class="tab__container">
+                    <ul class="tab__menu">
+                        <li class="tab active" data-tab="vanillajs">VanillaJS</li>
+                        <li class="tab" data-tab="nodejs">NodeJS</li>
+                    </ul>
+                    <pre class="nohighlight code">
+                        <code class="tab__pane active language-html vanillajs">
+                            &lt;script await src="https://sesligezinti.com/_v0.0.1.js"&gt;<br>
+                            &lt;script&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;const sesligezinti = new sesliGezinti('tr-TR', `${auth_key}`)<br>
+                            &lt;/script&gt;<br>
+                        </code>
+                        <code class="tab__pane nodejs">Çok yakında!</code>
+                    </pre>
+                    </div>
+                </section>
+                
+                <section class="js-section">
+                    <h3 class="section__title">Kullanım</h3>
+                    <p>Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel inani aeterno ad. Facer oratio ex per. At eam movet verear, in sea brute patrioque disputando, usu nonumes torquatos an. Ex his quaerendum intellegebat, ut vel homero accusam. Eum at debet tibique, in vocibus temporibus adversarium sed. Porro verear eu vix, ne usu tation vituperata.</p>
+                    <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant definiebas concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case dicant lobortis ius te, ad vel affert oportere reprehendunt. Quo no verterem deseruisse, mea brute postea te, ne per tacimates suavitate vituperatoribus.</p>
+                    <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant definiebas concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case dicant lobortis ius te, ad vel affert oportere reprehendunt. Quo no verterem deseruisse, mea brute postea te, ne per tacimates suavitate vituperatoribus.</p>
+                    <hr />
+                </section>
+                <section class="js-section">
+                    <h3 class="section__title">Fonksiyonlar</h3>
+                    <p>Esnek fonksiyonlar ile sesli gezinti hizmetinizi güçlendirin.</p>
+                    <h4>speak(text [, options])</h4>
+                    <div class="tab__container"><pre class="nohightlight code">
+                        <code class="javascript">
+                            sesligezinti.speak(<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;dom.innerText,<br><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;limit: 47,<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onstart: () => { dom.style.backgroundColor="red" }<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            )
+                        </code></pre></div>
+                    <table id="fonksiyonlar">
+                        <tr>
+                            <th>key</th>
+                            <th>value</th>
+                            <th>type</th>
+                            <th>default</th>
+                        </tr>
+                        <tr>
+                            <td>language</td>
+                            <td>Show syntax highlight on markdown text.</td>
+                            <td>string</td>
+                            <td><pre><code class="javascript">"tr-TR"</code></pre></td>
+                        </tr>
+                        <tr>
+                            <td>onstart</td>
+                            <td>Render table with Scribbler’s pretty table style.</td>
+                            <td>arrow function</td>
+                            <td><pre><code class="javascript">() => {}</code></pre></td>
+                        </tr>
+                        <tr>
+                            <td>onend</td>
+                            <td>Render table with Scribbler’s pretty table style.</td>
+                            <td>arrow function</td>
+                            <td><pre><code class="javascript">() => {}</code></pre></td>
+                        </tr>
+                        <tr>
+                            <td>limit</td>
+                            <td>Render table with Scribbler’s pretty table style.</td>
+                            <td>integer</td>
+                            <td><pre><code class="javascript">100</code></pre></td>
+                        </tr>
+                    </table>
+                    <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant definiebas concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case dicant lobortis ius te, ad vel affert oportere reprehendunt. Quo no verterem deseruisse, mea brute postea te, ne per tacimates suavitate vituperatoribus.</p>
+                    <hr />
+                </section>
+                <section class="js-section">
+                    <h3 class="section__title">Issues</h3>
+                    <p>Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel inani aeterno ad. Facer oratio ex per. At eam movet verear, in sea brute patrioque disputando, usu nonumes torquatos an. Ex his quaerendum intellegebat, ut vel homero accusam. Eum at debet tibique, in vocibus temporibus adversarium sed. Porro verear eu vix, ne usu tation vituperata.</p>
+                    <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant definiebas concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case dicant lobortis ius te, ad vel affert oportere reprehendunt. Quo no verterem deseruisse, mea brute postea te, ne per tacimates suavitate vituperatoribus.</p>
+                </section>
+            </article>
+        </div>
 
-    <footer class="footer">Scribbler is a free HTML template created exclusively for <a href="https://tympanus.net/codrops/" target="_blank" class="link link--light">Codrops</a>.</footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script src="scribbler.js"></script>
-  </body>
+        <footer class="footer"><a href="http://sesligezinti.com/" target="_blank" class="link link--light">Sesli Gezinti</a>, sosyal fayda odaklı bir <a href="https://www.webtures.com.tr/" target="_blank" class="link link--light">Webtures</a> projesidir.</footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="scribbler.js"></script>
+    </body>
 </html>
