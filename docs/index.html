@@ -1,45 +1,135 @@
-<html lang="tr">
+<!doctype html>
+<html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="robots" content="nofollow,noindex">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-        <title>Sesli Gezinti Dokümantasyon</title>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sesli Gezinti - Engelsiz Bir Web İçin</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
+        <link rel="stylesheet" href="scribbler-global.css">
+        <link rel="stylesheet" href="scribbler-landing.css">
+        <link rel="author" href="humans.txt">
     </head>
     <body>
-        <nav class="navbar navbar-expand navbar-dark bg-primary">
-            <a class="navbar-brand" href="/sesligezinti/"><img src="https://webtures.github.io/sesligezinti/sesligezintilogobeyaz.png"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/sesligezinti/">Dokümantasyon</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="http://sesligezinti.com/">Ayrıntılar</a>
-                    </li>
-                    
-                </ul>
-            </div>
+        <nav>
+        <div class="logo"></div>
+        <ul class="menu">
+            <div class="menu__item toggle"><span></span></div>
+            <li class="menu__item"><a href="doc.html" class="link link--dark"><i class="fa fa-book"></i> Dökümantasyon</a></li>
+            <li class="menu__item"><a href="https://github.com/webtures/sesligezinti" class="link link--dark"><i class="fa fa-github"></i> Github</a></li>
+        </ul>
         </nav>
-        <div class="container">
-            <div class="row flex-xl-nowrap">
-                <div class="col-12">
-
+        <div class="hero">
+        <h1 class="hero__title">Sesli Gezinti</h1>
+        <p class="hero__description">Web'i seslendirmek artık tamamen kontrol altında!</p>
+        </div>
+        <div class="hero__terminal">
+        <pre>
+            <!-- Place your demo code here -->
+            <code class="language-html">
+                &lt;html lang="tr"&gt;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;
+                &lt;meta name="description" content="Sesli Gezinti kütüphanesi sayesinde web'de gezinmek için görme yetisine sahip olmak şart değil. Üstelik geliştiriciler için jQuery kullanmak veya kullanıcılar için başka bir uygulama kullanmak zorunlu da değil! Web sitenizi şimdi Sesli Gezinti uyumlu yapın."&gt;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Sesli Gezintiye Hoş Geldiniz&lt;/title&gt;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="ornek" data-voiceID="1"&gt;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hangi sırayla nereyi seslendireceğimiz tamamen bizim kontrolümüzde!
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;script await src="https://sesligezinti.com/_.js"&gt;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&gt;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const sesligezinti = new sesliGezinti('tr-TR', `${auth_key}`)
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/script&gt;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+                    
+            </code>
+        </pre>
+        </div>
+        <div class="wrapper">
+        <div class="installation">
+            <h3 class="section__title">Kurulum</h3>
+            <div class="tab__container">
+            <ul class="tab__menu">
+                <li class="tab active" data-tab="vanillajs">VanillaJS</li>
+                <li class="tab" data-tab="nodejs">NodeJS</li>
+            </ul>
+            <pre class="nohighlight code">
+                <code class="tab__pane active language-html vanillajs">
+                    &lt;script await src="https://sesligezinti.com/_.js"&gt;<br>
+                    &lt;script&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;const sesligezinti = new sesliGezinti('tr-TR', `${auth_key}`)<br>
+                    &lt;/script&gt;<br>
+                </code>
+                <code class="tab__pane nodejs">Çok yakında!</code>
+            </pre>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="feature__item">
+            <h3 class="section__title">Tam Kontrol</h3>
+            <p>Dilediğiniz elementleri dilediğiniz sırayla seslendirin. Menülere erişim sağlayın. Aksiyonu tümüyle kullanıcının kontrolüne verin.</p>
+            </div>
+            <div class="feature__item">
+            <h3 class="section__title">Hız</h3>
+            <p>Web sayfalarınızın hızını hiç düşürmeden hizmet verin. Bir kez okuttuğunuz yazıyı sunucumuzda önbellekliyoruz. Yakında tarayıcı önbellekleme de geliyor!</p>
+            </div>
+            <div class="feature__item">
+            <h3 class="section__title">12 Dil</h3>
+            <p>Türkçe, İngilizce, Fransızca, Almanca... 12 dilde tam kullanım! Yeni dil seçeneklerimiz çok yakında!</p>
+            </div>
+        </div>
+        <div class="keybinding">
+            <ul class="keybinding__detail">
+            <h3 class="keybinding__title">Klasik Ekran</h3>
+            <li>Ses erişim izni <span class="keybinding__label">Sol Tık</span></li>
+            <li>İleri <span class="keybinding__label">Sol Tık</span></li>
+            <li>Geri <span class="keybinding__label">Sağ Tık</span></li>
+            <li>Durdur <span class="keybinding__label">AltGr</span></li>
+            <li>Aksiyon <span class="keybinding__label">Space</span></li>
+            </ul>
+            <ul class="keybinding__detail">
+            <h3 class="keybinding__title">Dokunmatik Ekran</h3>
+            <li><span class="keybinding__label">Tek Dokunuş</span> Ses erişim izni</li>
+            <li><span class="keybinding__label">Sağa Kaydır</span> İleri</li>
+            <li><span class="keybinding__label">Sola Kaydır</span> Geri</li>
+            <li><span class="keybinding__label">Tek Dokunuş</span> Durdur</li>
+            <li><span class="keybinding__label">Yukarı Kaydır</span> Aksiyon</li>
+            </ul>
+        </div>
+        <div class="callout">
+            <p>Ayrıntılı kurulum ve kullanım bilgisi için dokümantasyonu okuyun</p>
+            <a href="doc.html" class="button--primary">Dökümantasyon</a>
+        </div>
+        </div>
+        <div class="changelog">
+        <div class="wrapper">
+            <h3 class="section__title">Değişiklik Kaydı</h3>
+            <div class="changelog__item">
+                <div class="changelog__meta">
+                    <h4 class="changelog__title">v0.0.1 Beta</h4>
+                    <small class="changelog__date">09.05.2018</small>
+                </div>
+                <div class="changelog__detail">
+                    <ul>
+                        <li>Beta duyurusu yapıldı</li>
+                    </ul>
                 </div>
             </div>
+            <div class="changelog__callout">
+                <a href="#" class="button--secondary">Tüm Değişiklikler</a>
+            </div>
         </div>
-        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
-
         </div>
-        
-        <div class="scripts">
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-        </div>
+        <footer class="footer"><a href="http://sesligezinti.com/" target="_blank" class="link link--light">Sesli Gezinti</a>, sosyal fayda odaklı bir <a href="https://www.webtures.com.tr/" target="_blank" class="link link--light">Webtures</a> projesidir.</footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="scribbler.js"></script>
     </body>
 </html>
